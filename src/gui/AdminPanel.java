@@ -156,10 +156,9 @@ public class AdminPanel extends JPanel {
 
         JTextField txtNum = new JTextField(15);
         
-        // --- DEĞİŞİKLİK 2: JTextField tanımlaması ---
         JTextField txtFrom = new JTextField(15);
         JTextField txtTo = new JTextField(15); 
-        // --------------------------------------------
+
         
         JTextField txtDate = new JTextField(new SimpleDateFormat("yyyy-MM-dd").format(new Date()), 10); txtDate.setEditable(false);
         JTextField txtTime = new JTextField("10:00", 10); txtTime.setEditable(false);
@@ -361,24 +360,24 @@ public class AdminPanel extends JPanel {
     }
     private void executeAddFlight() {
         try {
-            // 1. Önce formdaki verileri alalım
+            
             String num = addFNum.getText().trim();
             String from = addFrom.getText().trim();
             String to = addTo.getText().trim();
-            String dateStr = addDate.getText().trim(); // Kullanıcının elle girdiği tarih
+            String dateStr = addDate.getText().trim(); 
 
-            // --- EN KRİTİK KONTROL BURASI ---
-            java.time.LocalDate today = java.time.LocalDate.now(); // Bugünün tarihi (24 Ocak 2026)
+            
+            java.time.LocalDate today = java.time.LocalDate.now();
             java.time.LocalDate flightDate;
 
             try {
-                flightDate = java.time.LocalDate.parse(dateStr); // Tarihi ayrıştır (YYYY-MM-DD)
+                flightDate = java.time.LocalDate.parse(dateStr); 
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, "Hata: Tarih formatı YYYY-MM-DD olmalı!");
-                return; // Format bozuksa burada dur, ekleme yapma!
+                return; 
             }
 
-            // EĞER SEÇİLEN TARİH BUGÜNDEN ÖNCEYSE
+       
             if (flightDate.isBefore(today)) {
                 JOptionPane.showMessageDialog(this, 
                     "HATA: Geçmiş bir tarihe uçuş ekleyemezsiniz!\n" +
@@ -387,18 +386,17 @@ public class AdminPanel extends JPanel {
                     "Geçersiz Tarih", 
                     JOptionPane.ERROR_MESSAGE);
                 
-                return; // <--- AGA BURASI ŞART! Eğer bu satırı koymazsan mesajı gösterir ama aşağıda eklemeye devam eder.
+                return; 
             }
-            // --------------------------------
-
-            // Eğer kod buraya kadar geldiyse tarih GEÇERLİDİR. Kayıt işlemlerine geçebiliriz:
+  
+          
             Plane plane = new Plane("PLN-" + num, "Boeing 737", 180);
             Flight f = new Flight(num, from, to, dateStr, addTime.getText(), addDuration.getText(), plane);
             
-            // FlightManager üzerinden kaydet
+  
             mainFrame.getFlightManager().createFlight(f);
             
-            // Tabloyu ve formu tazele
+ 
             refreshFlightTable();
             addFNum.setText(""); 
             addFrom.setText(""); 
