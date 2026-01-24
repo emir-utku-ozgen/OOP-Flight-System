@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-jupiter-api_5.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-jupiter-engine_5.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-jupiter-migrationsupport_5.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-jupiter-params_5.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-commons_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-engine_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-launcher_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-runner_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-suite-api_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-suite-commons_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-platform-suite-engine_1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/junit-vintage-engine_5.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/org.hamcrest_3.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/org.junit_4.13.2.v20240929-1000.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/org.apiguardian.api_1.1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/emirutkuozgen/Desktop/lib/org.opentest4j_1.3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
